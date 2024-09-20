@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { routes } from '../app.routes';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -25,8 +24,7 @@ import { RouterOutlet } from '@angular/router';
     MatIconModule,
     AsyncPipe,
     RouterLink,
-    RouterLinkActive,
-    RouterOutlet
+    RouterLinkActive
   ]
 })
 export class LayoutComponent {

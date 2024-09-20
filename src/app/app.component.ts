@@ -12,7 +12,15 @@ import { WelcomeComponent } from './welcome/welcome.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [MatButtonModule, MatIconModule, LayoutComponent, RouterOutlet, AddressFormComponent, DashboardComponent, WelcomeComponent],
+  imports: [
+    MatButtonModule,
+    MatIconModule,
+    LayoutComponent,
+    RouterOutlet,
+    AddressFormComponent,
+    DashboardComponent,
+    WelcomeComponent
+  ],
 })
 export class AppComponent {
   title = 'goodtime-web';
