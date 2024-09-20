@@ -103,7 +103,7 @@ h4 {
   font-weight: map-get(typography.$title-large, weight);
 }
 
-button.mat-raised-button {
-  background-color: mat.get-color-from-palette($_palettes, 50); // Aplica el color primary 50
-  color: mat.get-color-from-palette($_palettes, contrast, 50); // Asegura que el color del texto tenga contraste adecuado
-}
+// button.mat-raised-button {
+//   background-color: mat.get-color-from-palette($_palettes, 50); // Aplica el color primary 50
+//   color: mat.get-color-from-palette($_palettes, contrast, 50); // Asegura que el color del texto tenga contraste adecuado
+// }
