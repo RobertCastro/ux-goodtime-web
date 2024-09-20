@@ -5,16 +5,8 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'dashboard',
+    redirectTo: '',
   },
-  // {
-  //   path: 'welcome',
-  //   loadChildren: () =>
-  //     import('./welcome/welcome.component').then(
-  //       (m) => m.WelcomeComponent
-  //     ),
-  //   title: 'Welcome'
-  // },
   {
     path: 'dashboard',
     loadComponent: () =>

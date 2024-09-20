@@ -1,3 +1,8 @@
-<app-layout>
+<!-- <app-layout>
   <router-outlet />
+</app-layout> -->
+
+<app-welcome *ngIf="showWelcome" (start)="hideWelcome()"></app-welcome>
+<app-layout *ngIf="!showWelcome">
+  <router-outlet></router-outlet>
 </app-layout>
