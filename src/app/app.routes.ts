@@ -1,50 +1,42 @@
-// app.routes.ts
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '',
+    redirectTo: 'crear',
   },
   {
-    path: 'dashboard',
+    path: 'crear',
     loadComponent: () =>
-      import('./dashboard/dashboard.component').then(
-        (c) => c.DashboardComponent
+      import('./crear/crear.component').then(
+        (c) => c.CrearComponent
       ),
-    title: 'Dashboard'
+    title: 'Crear alarma'
   },
   {
-    path: 'address',
+    path: 'listar',
     loadComponent: () =>
-      import('./address-form/address-form.component').then(
-        (c) => c.AddressFormComponent
+      import('./listar/listar.component').then(
+        (c) => c.ListarComponent
       ),
-    title: 'Address'
+    title: 'Listado de alarmas'
   },
   {
-    path: 'table',
+    path: 'historial',
     loadComponent: () =>
-      import('./table/table.component').then(
-        (c) => c.TableComponent
+      import('./historial/table.component').then(
+        (c) => c.HistorialComponent
       ),
-    title: 'Table'
+    title: 'Historial'
   },
   {
-    path: 'tree',
+    path: 'estadisticas',
     loadComponent: () =>
-      import('./tree/tree.component').then(
-        (c) => c.TreeComponent
+      import('./estadisticas/estadisticas.component').then(
+        (c) => c.EstadisticasComponent
       ),
-    title: 'Tree'
+    title: 'Estadisticas'
   },
-  {
-    path: 'drag-drop',
-    loadComponent: () =>
-      import('./drag-drop/drag-drop.component').then(
-        (c) => c.DragDropComponent
-      ),
-    title: 'Drag-Drop'
-  },
+
 ];

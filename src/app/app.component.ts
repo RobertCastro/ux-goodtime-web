@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterOutlet } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { CommonModule } from '@angular/common'; // Importa CommonModule
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common'; // Importa CommonModule
     LayoutComponent, 
     RouterOutlet, 
     WelcomeComponent,
-    CommonModule  // Asegúrate de importar CommonModule para usar *ngIf
+    CommonModule
   ],
 })
 export class AppComponent {
