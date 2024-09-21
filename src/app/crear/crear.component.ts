@@ -35,6 +35,18 @@ import { FormsModule } from '@angular/forms';
   ]
 })
 export class CrearComponent {
+onFileSelected($event: Event) {
+throw new Error('Method not implemented.');
+}
+saveAlarm() {
+throw new Error('Method not implemented.');
+}
+goBack() {
+throw new Error('Method not implemented.');
+}
+selectImage() {
+throw new Error('Method not implemented.');
+}
   private breakpointObserver = inject(BreakpointObserver);
 
   /** Based on the screen size, switch from standard to one column per row */

@@ -31,3 +31,63 @@
 .mdc-text-field{
   border: 0;
 }
+
+
+// sss
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.first-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+.time-inputs {
+  display: flex;
+  align-items: center;
+}
+
+.hour-input,
+.minute-input {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.am-pm-toggle {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.days-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-card {
+  text-align: center;
+}
+
+.second-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+

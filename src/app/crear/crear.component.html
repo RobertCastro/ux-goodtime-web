@@ -1,4 +1,4 @@
-<div class="grid-container">
+<!-- <div class="grid-container">
   <h1 class="mat-h1">Crear alarma</h1>
   <mat-grid-list cols="2" rowHeight="2:1">
 
@@ -41,4 +41,82 @@
   </mat-grid-list>
 
 
+</div> -->
+
+<div class="grid-container">
+  <div class="row first-row">
+    <!-- First Column -->
+    <div class="column">
+      <h3>Hora de alarma</h3>
+      
+      <!-- Time Inputs -->
+      <div class="time-inputs">
+        <mat-form-field appearance="outline" class="hour-input">
+          <mat-label>Hora</mat-label>
+          <input matInput [(ngModel)]="hour" type="number" placeholder="00" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="minute-input">
+          <mat-label>Minuto</mat-label>
+          <input matInput [(ngModel)]="minute" type="number" placeholder="00" />
+        </mat-form-field>
+        
+        <!-- AM/PM Radio Buttons -->
+        <mat-radio-group class="am-pm-toggle" [(ngModel)]="timeFormat">
+          <mat-radio-button value="AM">AM</mat-radio-button>
+          <mat-radio-button value="PM">PM</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <!-- Alarm Name Input -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nombre de la alarma</mat-label>
+        <input matInput [(ngModel)]="alarmName" placeholder="Ingresa un nombre" />
+      </mat-form-field>
+
+      <!-- File Input for Sound -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Seleccionar sonido</mat-label>
+        <input type="file" (change)="onFileSelected($event)" />
+      </mat-form-field>
+
+      <!-- Days of the Week Checkboxes -->
+      <div class="days-checkboxes">
+        <mat-checkbox [(ngModel)]="days.lu">Lu</mat-checkbox>
+        <mat-checkbox [(ngModel)]="days.ma">Ma</mat-checkbox>
+        <mat-checkbox [(ngModel)]="days.mi">Mi</mat-checkbox>
+        <mat-checkbox [(ngModel)]="days.ju">Ju</mat-checkbox>
+        <mat-checkbox [(ngModel)]="days.vi">Vi</mat-checkbox>
+        <mat-checkbox [(ngModel)]="days.sa">Sa</mat-checkbox>
+        <mat-checkbox [(ngModel)]="days.do">Do</mat-checkbox>
+      </div>
+    </div>
+
+    <!-- Second Column -->
+    <div class="column">
+      <!-- Image Preview and File Input -->
+      <mat-card class="image-card">
+        <img [src]="selectedImageUrl || 'default-image-url'" alt="Selected image" />
+        <button mat-raised-button (click)="selectImage()">Seleccionar foto</button>
+      </mat-card>
+
+      <!-- Alarm Description -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Descripción</mat-label>
+        <textarea matInput [(ngModel)]="description" placeholder="Descripción de la alarma"></textarea>
+        <mat-hint>La descripción le ayudará a recordar el propósito de la alarma</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!-- Second Row - Buttons -->
+  <div class="row second-row">
+    <div class="button-container">
+      <button mat-raised-button color="warn" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon> Regresar
+      </button>
+      <button mat-raised-button color="primary" (click)="saveAlarm()">
+        <mat-icon>check</mat-icon> Guardar
+      </button>
+    </div>
+  </div>
 </div>
