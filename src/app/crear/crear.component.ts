@@ -35,6 +35,11 @@ import { FormsModule } from '@angular/forms';
   ]
 })
 export class CrearComponent {
+onSubmit() {
+throw new Error('Method not implemented.');
+}
+imageUrl: any;
+alarmForm: any;
 onFileSelected($event: Event) {
 throw new Error('Method not implemented.');
 }
@@ -73,7 +78,16 @@ hour: any;
 minute: any;
 timeFormat: any;
 alarmName: any;
-days: any;
+days: { lu: boolean, ma: boolean, mi: boolean, ju: boolean, vi: boolean, sa: boolean, do: boolean } = {
+  lu: false,
+  ma: false,
+  mi: false,
+  ju: false,
+  vi: false,
+  sa: false,
+  do: false
+};
+
 selectedImageUrl: any;
 description: any;
 }
